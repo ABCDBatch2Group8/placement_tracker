@@ -1,25 +1,5 @@
 
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <button mat-icon-button>
-            <mat-icon (click)="sidenav.toggle();">menue</mat-icon>
-        </button>
-        <h1>welcome {{dashboard.name}}</h1>
-    </mat-toolbar-row>
-</mat-toolbar>
-    <mat-sidenav-container>
-        <mat-sidenav #sidenav class="sidenav" opened="true">
-            <mat-nav-list >
-                <a routerLink="profile" mat-list-item><h6>your profile</h6></a>
-                <a routerLink="job" mat-list-item><h6>job openings for you</h6></a>
-                <a routerLink="settings"mat-list-item><h6>settings</h6></a>
-                <a routerLink="contact" mat-list-item><h6>contact us</h6></a>
-            </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <div class="dash">
-                <router-outlet></router-outlet>
-            </div>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+
+           <router-outlet></router-outlet>
+            
 

@@ -22,12 +22,7 @@ import { StudAuthService } from './stud-auth.service';
 import { StudDashboardComponent } from './stud-dashboard/stud-dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
-import { MatSliderModule } from '@angular/material/slider';
+
 import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
 import { StudProfilepageComponent } from './stud-profilepage/stud-profilepage.component';
 import { StudSettingspageComponent } from './stud-settingspage/stud-settingspage.component';
@@ -63,12 +58,7 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatButtonModule,
-    MatSliderModule
+    
 
     
   ],
