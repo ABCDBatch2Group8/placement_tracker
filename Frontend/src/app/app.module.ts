@@ -64,7 +64,6 @@ import { AdmnCandidatesService } from './admn-candidates.service';
     DataTablesModule,
     FormsModule,
     HttpClientModule
-
   ],
   providers: [AdmnAuthService,AdmnEmployerService,AdmnCandidatesService,StudAuthService],
   bootstrap: [AppComponent]
