@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +25,6 @@ import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
 import { EmpProfileComponent } from './emp-profile/emp-profile.component';
 import { JobPostComponent } from './job-post/job-post.component';
 import { JobService } from './job.service';
-import { SkillService } from './skill.service';
 
 
 @NgModule({
@@ -54,10 +52,9 @@ import { SkillService } from './skill.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    NgMultiSelectDropDownModule.forRoot()
+    ReactiveFormsModule
   ],
-  providers: [EmpService,JobService,SkillService],
+  providers: [EmpService,JobService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

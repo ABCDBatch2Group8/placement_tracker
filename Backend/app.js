@@ -13,7 +13,6 @@ app.use(cors());
 // Import Routes
 const employerRoute = require('./routes/employer')
 const jobRoute = require('./routes/job')
-const skillRoute = require('./routes/skill')
 
 app.use('/employer/',employerRoute)
 app.use('/job/',jobRoute)
