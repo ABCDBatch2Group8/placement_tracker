@@ -25,6 +25,9 @@ import { AdmnEmployerComponent } from './admn-employer/admn-employer.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AdmnEmpprofileComponent } from './admn-empprofile/admn-empprofile.component';
 import { AdmnCandidatesComponent } from './admn-candidates/admn-candidates.component';
+import { AdmnAuthService } from './admn-auth.service';
+import { AdmnEmployerService } from './admn-employer.service';
+import { AdmnCandidatesService } from './admn-candidates.service';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,12 @@ import { AdmnCandidatesComponent } from './admn-candidates/admn-candidates.compo
     AdmnEmployerComponent,
     AdmnEmpprofileComponent,
     AdmnCandidatesComponent
+    StudDashboardComponent,
+    StudJoblistComponent,
+    StudProfilepageComponent,
+    StudSettingspageComponent,
+    StudContactUspageComponent,
+    StudFormP2Component,
   ],
   imports: [
     BrowserModule,   
@@ -57,7 +66,7 @@ import { AdmnCandidatesComponent } from './admn-candidates/admn-candidates.compo
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [AdmnAuthService,AdmnEmployerService,AdmnCandidatesService,StudAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
