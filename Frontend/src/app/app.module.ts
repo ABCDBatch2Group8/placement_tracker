@@ -57,7 +57,7 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
+    
     
 
     
