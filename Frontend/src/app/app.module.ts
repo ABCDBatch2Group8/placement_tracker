@@ -50,7 +50,6 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     StudSettingspageComponent,
     StudContactUspageComponent,
     StudFormP2Component,
-    
   ],
   imports: [
     BrowserModule,
