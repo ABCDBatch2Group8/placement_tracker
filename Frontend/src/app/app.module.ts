@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { StudSignupComponent } from './stud-signup/stud-signup.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdmnDashboardComponent } from './admn-dashboard/admn-dashboard.component';
 import { AdmnLoginComponent } from './admn-login/admn-login.component';
+import { AdmnCourseComponent } from './admn-course/admn-course.component';
+import { AdmnStudentsComponent } from './admn-students/admn-students.component';
+import { AdmnSubadmnComponent } from './admn-subadmn/admn-subadmn.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +36,18 @@ import { AdmnLoginComponent } from './admn-login/admn-login.component';
     StudSignupComponent,
     AdminComponent,
     AdmnDashboardComponent,
-    AdmnLoginComponent
+    AdmnLoginComponent,
+    AdmnCourseComponent,
+    AdmnStudentsComponent,
+    AdmnSubadmnComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

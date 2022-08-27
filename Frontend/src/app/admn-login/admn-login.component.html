@@ -16,21 +16,23 @@
                         <div class="process-cap">
                            <h5>Admin Login</h5>
                            
-                           <form action="#">
-                           <div class="mt-10">
-                            <input type="text" name="admnlogin" placeholder="User Name"
+                           <form (ngSubmit)="loginAdmin()" #adminlogin="ngForm">
+                           <div class="form-group mt-10">
+                            <input type="text" name="email" placeholder="User Name"
                                 onfocus="this.placeholder = ''" onBlur="this.placeholder = 'User Name'" required
-                                class="single-input">
+                                class="form-control single-input" [(ngModel)]="email" >
                             </div>
                             
-                            <div class="mt-10">
-                            <input type="password" name="admnlogin" placeholder="Password"
+                            <div class="form-group mt-10">
+                            <input type="password" name="password" placeholder="Password"
                                 onfocus="this.placeholder = ''" onBlur="this.placeholder = 'Password'" required
-                                class="single-input">
+                                class="form-control single-input" [(ngModel)]="password">
                             </div>
+                            <br>
+                            <button type="submit" class="genric-btn success circle">Login </button>      
                            </form>
                            <br>
-                           <a href="#" class="genric-btn success circle">Login </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -41,6 +43,7 @@
                     
                 </div>
             </div>
+            
          </div>
     </div>
     <!-- How  Apply Process End-->
