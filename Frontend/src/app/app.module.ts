@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +19,12 @@ import { AdmnLoginComponent } from './admn-login/admn-login.component';
 import { AdmnCourseComponent } from './admn-course/admn-course.component';
 import { AdmnStudentsComponent } from './admn-students/admn-students.component';
 import { AdmnSubadmnComponent } from './admn-subadmn/admn-subadmn.component';
-import { TestComponent } from './test/test.component';
+import { StudDashboardComponent } from './stud-dashboard/stud-dashboard.component';
+import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
+import { StudContactUspageComponent } from './stud-contact-uspage/stud-contact-uspage.component';
+import { StudProfilepageComponent } from './stud-profilepage/stud-profilepage.component';
+import { StudSettingspageComponent } from './stud-settingspage/stud-settingspage.component';
+import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
 
 @NgModule({
   declarations: [
@@ -40,16 +44,20 @@ import { TestComponent } from './test/test.component';
     AdmnCourseComponent,
     AdmnStudentsComponent,
     AdmnSubadmnComponent,
-    TestComponent
+    StudFormP2Component,
+    StudDashboardComponent,
+    StudJoblistComponent,
+    StudContactUspageComponent,
+    StudProfilepageComponent,
+    StudSettingspageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
-
   ],
-  providers: [],
+  providers: [StudAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
