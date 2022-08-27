@@ -56,7 +56,7 @@ import { AdmnCandidatesService } from './admn-candidates.service';
     StudProfilepageComponent,
     StudSettingspageComponent,
     StudContactUspageComponent,
-    StudFormP2Component,
+    StudFormP2Component
   ],
   imports: [
     BrowserModule,   
