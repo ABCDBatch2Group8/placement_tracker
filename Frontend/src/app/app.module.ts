@@ -56,11 +56,7 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    
-    
-
-    
+    FormsModule
   ],
   providers: [StudAuthService],
   bootstrap: [AppComponent]
