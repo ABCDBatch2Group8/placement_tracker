@@ -20,7 +20,7 @@ import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { StudAuthService } from './stud-auth.service';
 import { StudDashboardComponent } from './stud-dashboard/stud-dashboard.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
@@ -57,7 +57,7 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
+    
     
 
     
