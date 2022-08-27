@@ -50,7 +50,7 @@ import { AdmnCandidatesService } from './admn-candidates.service';
     AdmnMenuComponent,
     AdmnEmployerComponent,
     AdmnEmpprofileComponent,
-    AdmnCandidatesComponent
+    AdmnCandidatesComponent,
     StudDashboardComponent,
     StudJoblistComponent,
     StudProfilepageComponent,
