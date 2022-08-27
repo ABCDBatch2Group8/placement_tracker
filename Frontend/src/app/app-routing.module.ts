@@ -10,6 +10,9 @@ import { LandingComponent } from './landing/landing.component';
 import { StudLoginComponent } from './stud-login/stud-login.component';
 import { StudSignupComponent } from './stud-signup/stud-signup.component';
 import { StudentComponent } from './student/student.component';
+import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
+import { EmpProfileComponent } from './emp-profile/emp-profile.component';
+import { JobPostComponent } from './job-post/job-post.component';
 
 const routes: Routes = [
   {path : "", component : LandingComponent},
@@ -17,7 +20,10 @@ const routes: Routes = [
   children : [
     {path : "", component : EmpLoginComponent},
     {path : "login", component : EmpLoginComponent},
-    {path : "signup", component : EmpSignupComponent}
+    {path : "signup", component : EmpSignupComponent},
+    {path : "dashboard", component: EmpDashboardComponent},
+    {path : "profile", component: EmpProfileComponent},
+    {path : "job-post", component: JobPostComponent }
   ]
   },
   {path : "student", component : StudentComponent,
