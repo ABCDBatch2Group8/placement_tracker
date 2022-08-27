@@ -1,5 +1,5 @@
 (function ($)
-  { "use strict"
+  { "use strict" 
   
 /* 1. Proloder */
     $(window).on('load', function () {
@@ -214,12 +214,6 @@
     new WOW().init();
 
 /* 11. Datepicker */
-    
-// 11. ---- Mailchimp js --------//  
-    function mailChimp() {
-      $('#mc_embed_signup').find('form').ajaxChimp();
-    }
-    mailChimp();
 
 
 // 12 Pop Up Img
