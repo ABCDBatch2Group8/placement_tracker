@@ -2,11 +2,11 @@ const express = require ('express');
 const router = express.Router();
 const Employer = require('../models/employer');
 
-
-router.post('/signup',(req,res)=>{
+// Employer signup 
+router.post('/signup',  async (req,res)=>{
 
     Employer.findOne({"email": req.body.employer.email}).then(function(getEmail){
- 
+    //Allow signup only if the email is not already registered 
     if (getEmail  == null) {
     console.log("req.body",req.body)
     const employer = new Employer({
@@ -27,12 +27,14 @@ router.post('/signup',(req,res)=>{
         console.log("error",err)
     })}
     else{
+      // Customised error message when the user is already registered
         console.log("email exists")
         res.json({"message":"Email already registered. Please login", "status":"error"})
     }
 })
 });
 
+// Employer login
 router.post('/login', (req, res) => {
     var flag=false;
     
@@ -41,13 +43,10 @@ router.post('/login', (req, res) => {
         const eml = req.body.employer.email;
 
         console.log("within login",req.body)
-
-        // let getUser;
         
-    
         Employer.findOne({"email":eml}).then(function(getUser){
-        // res.json(getUser);
         console.log("getUser"+getUser);
+        // Customised error mesage when the login data doesnt exist
         if (getUser == null) {
             console.log("In null")
             res.json({"message": "This email address is not recognised, please check you have entered the correct email","status":"error" });
@@ -59,10 +58,6 @@ router.post('/login', (req, res) => {
             res.json({"message":"Login successful","status":"success","eid":getUser._id});
             flag = true
             console.log(getUser);
-            // let payload={subject:getUser.username+getUser.password}
-            // let token = jwt.sign(payload,'secretKey')
-            // console.log("token is",token)
-            // res.status(200).json({token}) 
             } 
           else{
             res.json({"message":"Sorry your password is incorrect","status":"error"});

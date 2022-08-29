@@ -17,9 +17,13 @@ const jobRoute = require('./routes/job')
 app.use('/employer/',employerRoute)
 app.use('/job/',jobRoute)
 
+
+const port=process.env.PORT||3000;
 // Connect to db
 mongoose.connect(process.env.dbUrl, {useNewUrlParser: true}, () =>
     console.log('Connected to DB!')
 );
 // Server
-app.listen(5000);
+app.listen(port,() => {
+    console.log('Server starts at :'+port);  
+});
