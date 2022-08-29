@@ -50,6 +50,6 @@ let jobsSchema = new Schema({
     default: undefined
   }
 }, {
-    collection: 'Jobs'
+    collection: 'jobs'
   })
 module.exports = mongoose.model('Job', jobsSchema)
