@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -18,13 +17,19 @@ import { StudSignupComponent } from './stud-signup/stud-signup.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdmnDashboardComponent } from './admn-dashboard/admn-dashboard.component';
 import { AdmnLoginComponent } from './admn-login/admn-login.component';
-
 import { EmpService } from './emp.service';
 import { PasswordPatternDirective } from './password-pattern.directive';
 import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
 import { EmpProfileComponent } from './emp-profile/emp-profile.component';
 import { JobPostComponent } from './job-post/job-post.component';
 import { JobService } from './job.service';
+import { StudAuthService } from './stud-auth.service';
+import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
+import { StudProfilepageComponent } from './stud-profilepage/stud-profilepage.component';
+import { StudSettingspageComponent } from './stud-settingspage/stud-settingspage.component';
+import { StudContactUspageComponent } from './stud-contact-uspage/stud-contact-uspage.component';
+import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -45,7 +50,12 @@ import { JobService } from './job.service';
     PasswordPatternDirective,
     EmpDashboardComponent,
     EmpProfileComponent,
-    JobPostComponent
+    JobPostComponent,
+    StudJoblistComponent,
+    StudProfilepageComponent,
+    StudSettingspageComponent,
+    StudContactUspageComponent,
+    StudFormP2Component
   ],
   imports: [
     BrowserModule,
@@ -55,6 +65,10 @@ import { JobService } from './job.service';
     ReactiveFormsModule
   ],
   providers: [EmpService,JobService],
+=======
+    FormsModule
+  ],
+  providers: [StudAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

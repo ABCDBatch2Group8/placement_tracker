@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes} from  '@angular/router';
+
+// import {  } from "@angular/";
 import { AdminComponent } from './admin/admin.component';
 import { AdmnDashboardComponent } from './admn-dashboard/admn-dashboard.component';
 import { AdmnLoginComponent } from './admn-login/admn-login.component';
@@ -10,9 +12,16 @@ import { LandingComponent } from './landing/landing.component';
 import { StudLoginComponent } from './stud-login/stud-login.component';
 import { StudSignupComponent } from './stud-signup/stud-signup.component';
 import { StudentComponent } from './student/student.component';
+
 import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
 import { EmpProfileComponent } from './emp-profile/emp-profile.component';
 import { JobPostComponent } from './job-post/job-post.component';
+import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
+import { StudContactUspageComponent } from './stud-contact-uspage/stud-contact-uspage.component';
+import { StudProfilepageComponent } from './stud-profilepage/stud-profilepage.component';
+import { StudSettingspageComponent } from './stud-settingspage/stud-settingspage.component';
+import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
+
 
 const routes: Routes = [
   {path : "", component : LandingComponent},
@@ -30,7 +39,13 @@ const routes: Routes = [
   children : [
     {path : "", component : StudLoginComponent},
     {path : "login", component : StudLoginComponent},
-    {path : "signup", component : StudSignupComponent}
+    {path : "signup", component : StudSignupComponent},
+    {path : "job", component :StudJoblistComponent},
+    {path : "contact", component :StudContactUspageComponent},
+    {path : "profile", component :StudProfilepageComponent},
+    {path : "settings", component :StudSettingspageComponent},
+    {path : "updatepg2", component :StudFormP2Component}
+  
   ]
   },
   {path : "admin", component : AdminComponent,
