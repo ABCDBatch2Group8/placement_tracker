@@ -2,14 +2,14 @@ const mongoose  = require("mongoose");
 
 const Schema = mongoose.Schema;
 const SignupSchema = new Schema({
-    name : {type : String},
-    email :{type : String},
-    dwmsid :{type : String},
-    contactNo :{type : String},
-    courseInICT : {type : String},
-    qualification : {type : String},
-    stream : {type : String},
-    password : {type : String},
+    name : {type : String,required: true},
+    email :{type : String,required: true},
+    dwmsid :{type : String,required: true},
+    contactNo :{type : String,required: true},
+    courseInICT : {type : String,required: true},
+    qualification : {type : String,required: true},
+    stream : {type : String,required: true},
+    password : {type : String,required: true},
     // skill:{type:String}
     // non required groups below
     educationMarks:{

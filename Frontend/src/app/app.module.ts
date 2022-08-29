@@ -19,9 +19,6 @@ import { AdmnLoginComponent } from './admn-login/admn-login.component';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { StudAuthService } from './stud-auth.service';
-import { StudDashboardComponent } from './stud-dashboard/stud-dashboard.component';
-
-
 
 import { StudJoblistComponent } from './stud-joblist/stud-joblist.component';
 import { StudProfilepageComponent } from './stud-profilepage/stud-profilepage.component';
@@ -44,7 +41,6 @@ import { StudFormP2Component } from './stud-form-p2/stud-form-p2.component';
     AdminComponent,
     AdmnDashboardComponent,
     AdmnLoginComponent,
-    StudDashboardComponent,
     StudJoblistComponent,
     StudProfilepageComponent,
     StudSettingspageComponent,

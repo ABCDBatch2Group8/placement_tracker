@@ -1,8 +1,9 @@
 const express = require("express");
 const route = express.Router();
-const Student = require("../model/student-data-model");
-const IctkStudent = require("../model/ictk-student-model")
-const Course = require("../model/course-list-model.js")
+const Student = require("../models/student-data-model");
+const IctkStudent = require("../models/ictk-student-model")
+const Course = require("../models/course-list-model.js")
+const Jobs = require("../models/job-list-model")
 const jwt = require('jsonwebtoken');
 
 route.post("/signin",(req,res)=>{
@@ -143,6 +144,14 @@ route.put('/dashboard/update2', async (req, res) => {
    }   
 }); 
 
+// jobs displaying
+
+route.get("/jobListing",(req,res)=>{
+  Jobs.find().then(function(job){
+    console.log("in get jobs ")
+    res.send(job);
+  })
+})
 
 module.exports = route;
     

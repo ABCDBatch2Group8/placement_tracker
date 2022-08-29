@@ -110,5 +110,8 @@ export class StudAuthService {
       return this.http.put<any>("http://localhost:3000/student/dashboard/update2",stud)
       .subscribe(data => {console.log(data)})
   }
+  // booksdata(){
+  //   return this.http.get("books");
+  // }
   
 }
